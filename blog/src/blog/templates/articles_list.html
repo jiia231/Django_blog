@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p><small><a href="{% url 'articles_list' %}?date_sort=asc">Сначала старые</a></small></p>
+    <p><small><a href="{% url 'articles_list' %}?date_sort=desc">Сначала новые</a></small></p>
+    {% for article in articles %}
+        <h3><a href="{% url 'article_detail' article.id %}">{{ article.title }}</a></h3>
+        <p><small>Опубликовано : {{ article.created_at }}</small></p>
+        <p> Теги : {% for tag in article.tags %}
+            <a href="{% url 'articles_list' %}?tag={{ tag.name }}">{{ tag.name }} </a>
+        {% endfor %}
+        </p>
+    {% endfor %}
+{% endblock %}

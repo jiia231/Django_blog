@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Блог</title>
+</head>
+<header>
+    <h1><a href="{% url 'articles_list' %}">Блог</a></h1>
+</header>
+
+<body>
+{% block content %}
+{% endblock %}
+</body>
+
+<h5><a href="{% url 'feedback' %}">Форма обратной связи</a></h5>
+
+</html>

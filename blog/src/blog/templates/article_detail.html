@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content|safe }}</p>
+    <p>Опубликовано: {{ article.created_at }}</p>
+    <p> Теги : {% for tag in article.tags %}
+        <a href="{% url 'articles_list' %}?tag={{ tag.name }}">{{ tag.name }} </a>
+    {% endfor %}
+    </p>
+{% endblock content %}
