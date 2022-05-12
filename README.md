@@ -1,25 +1,25 @@
-# Django Блог
+# Django Blog
 
-### Описание
+### Description
 
-Персональный блог на Django с системой тегов и редактором статей, поддерживающим html-разметку.
+A personal Django blog with a tagging system and an article editor with html markup support.
 
-### Запуск
+### Launch
 
-Для запуска используйте docker-compose.
+Use docker-compose to run.
 
 ```bash
 docker-compose -f docker-compose.yaml up --build
 ```
 
-Он запустит блог, базу данных и nginx в докер-контейнерах. Блог запустится через gunicorn.
+It will run a blog, database, and nginx in docker containers. The blog will be launched via gunicorn.
 
 
-### Использование
+### Usage
 
-1. Зайдите в админ панель по адресу **localhost/admin**. При запуске автоматически создаётся суперпользователь с username'ом **admin** и паролем **password**.
-2. Здесь можно создавать теги, писать статьи. Редактор статей поддерживает добавление изображений, изменение стиля текста, создание списков и т.д.
-3. Создайте или отредактируйте статью, добавьте в неё изображение.
-4. Проверьте его отображение по адресу **localhost/articles**
-5. Здесь можно посмотреть все статьи, отсортировать их по дате публикации, отфильтровать по тегам
-6. Нажав на название статьи, можно перейти на её страницу, где статья отобразится полностью
+1. Go to the admin panel at **localhost/admin**. On startup, a superuser is automatically created with username **admin** and password **password**.
+2. Here you can create tags, write articles. The article editor supports adding images, changing text style, creating lists, and more.
+3. Create or edit an article, add an image to it.
+4. Check how it is displayed at **localhost/articles**
+5. Here you can view all articles, sort them by publication date, filter by tags
+6. By clicking on the article title, you can go to its page, where full article will be displayed
